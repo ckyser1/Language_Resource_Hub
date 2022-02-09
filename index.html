@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+   
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,20 +14,40 @@
     <h1> Language Hub</h1>
   </header>
 
-
   <main class="flex-row justify-space-between">
     <div class="col-12 col-md-8">
+<!-- this is the code for the drop down bar -->
 
       <div class="card col-9">
-        <h3 class="card-header text-uppercase">Search By User</h3>
-        <form id="user-form" class="card-body">
-          <label class="form-label" for="username">Username</label>
-          <input name="username" id="username" type="text" autofocus="true" class="form-input" />
-          <button type="submit" class="btn">Get User</button>
-          <p>changes</p>
+        <h3 class="card-header text-uppercase">Select language!</h3>
+        <form>
+            <select id='videos' onchange="selectVideo()">
+            <option value="nothing">Select video from this list</option>
+            <option value="Phython">phython</option>
+               <option value="CSS">CSS</option>
+               <option value="HTML">HTML</option>
+               <option value="SQL">SQL</option>
+               <!--<option value="C++">C++</option>-->
+               <option value="javascript">JavaScript</option>
+            </select>
         </form>
       </div>
+<!--end of search by language drop down -->
+<!--start of search bar -->
+<div class="card col-9">
+    <h3>Search by keywords or language!</h3>
+    <p>Search by keywords or language!</p>
+    
+    <form>
+       
+        <input id="search-field" type="search" placeholder="Search by keyword, language"><br>
+        <input id="search-button" type="submit">
 
+    </form>
+ </div>
+
+
+<!--end of search bar -->
       <aside class="card col-3">
         <h3 class="card-header text-uppercase">Search By Topic</h3>
         <div id="language-buttons" class="card-body">
@@ -40,6 +60,8 @@
   </main>
 
   <script src="./js/script.js"></script>
+
+</script>
 </body>
 
 </html>
