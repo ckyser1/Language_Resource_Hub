@@ -34,8 +34,7 @@ h6 {
 }
 
 main {
-  margin: 20px auto;
-  width: 94%;
+  margin-top: 5px;
 }
 
 p {
@@ -45,10 +44,10 @@ p {
  .btn {
   font-size: 1.3rem;
   text-decoration:none;
-  padding: 6px 5px;
+  padding: 10px 5px;
   width: 100%;
   display: block;
-  margin: 5px 0;
+  margin: 5px 0 20px;
   border-radius: var(--border-radius);
   color: var(--primary);
   border: none;
@@ -142,15 +141,16 @@ p {
 }
 
 .icon-success {
-  color: rgb(29, 153, 255);
+  color: rgb(29, 255, 255);
 }
 
 /* CARDS */
 .card {
-  margin: 0 0 20px 0;
-  border: 3px solid var(--dark);
+  border: 3px solid var(--light-dark);
   border-radius: var(--border-radius);
   display:inline-block;
+  width:69%;
+  height:100%
 }
 
 .card-header {
@@ -162,6 +162,16 @@ p {
 
 .card-body {
   padding: 2.5%;
+}
+
+.aside {
+  border: 3px solid var(--light-dark);
+  border-radius: var(--border-radius);
+  clear: both;
+  float: right;
+  height: 100%;
+  width: 30%;
+  flex-wrap:wrap;
 }
 
 /* FORM */
