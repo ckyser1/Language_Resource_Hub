@@ -1,5 +1,3 @@
-//
-
 
 function selectVideo(){
     var urlString = "http://www.youtube.com/";
@@ -10,6 +8,3 @@ function selectVideo(){
     }
 }
 
-
-//var keywords = [];
-//function keywordsearch() {
