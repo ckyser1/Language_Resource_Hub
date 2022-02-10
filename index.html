@@ -10,33 +10,31 @@
 </head>
 
 <body class="flex-column min-100-vh">
-  <header class="title">
+  <header class="title text-uppercase">
     <h1> Computer Language Hub</h1>
   </header>
 
   <main class="flex-row justify-space-between">
     <div class="container col-12">
         <section class="hero">
-          <section class="textbottom hero-header">
+          <section class="textbottom hero-header text-uppercase">
             <h2"> The Easiest Way to Find Your Next Development Job</h2>
-            
           </section>
-            
         </section>
  
       
 <!-- this is the code for the drop down bar -->
-      <section class="card col-9">
+      <section class="card-dd col-9">
         <h3 class="card-header text-uppercase">Select language!</h3>
-        <form>
+        <form class="dropdown-content">
             <select id='videos' onchange="selectVideo()">
-            <option value="nothing">Select video from this list</option>
-            <option value="Phython">phython</option>
-               <option value="CSS">CSS</option>
-               <option value="HTML">HTML</option>
-               <option value="SQL">SQL</option>
-               <!--<option value="C++">C++</option>-->
-               <option value="javascript">JavaScript</option>
+              <option value="nothing">Select video from this list</option>
+              <option value="Python">python</option>
+              <option value="CSS">CSS</option>
+              <option value="HTML">HTML</option>
+              <option value="SQL">SQL</option>
+              <!--<option value="C++">C++</option>-->
+              <option value="javascript">JavaScript</option>
             </select>
         </form>
       </section>
@@ -54,7 +52,7 @@
 
 <!--end of search by language drop down -->
 <!--start of search bar -->
-<div class="card col-9">
+<div class="card-s col-9">
     <h3 class="card-header text-uppercase">Search by keywords or language!</h3>
     <p>Search by keywords or language!</p>
     
