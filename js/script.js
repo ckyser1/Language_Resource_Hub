@@ -1,5 +1,5 @@
 var APIkey = "AIzaSyB0hJGNmA5cC6nBDR_ZRCwORbzAtXeZEgw"
-var youtubeURL = "https://www.googleapis.com/youtube/v3/searchqkey=" + language + APIkey;
+var youtubeURL = "https://www.googleapis.com/youtube/v3/search" + language + APIkey;
 
 
 function selectVideo(){

@@ -10,24 +10,31 @@
 </head>
 
 <body class="flex-column min-100-vh">
-  <header class="hero">
-    <h1> Language Hub</h1>
+  <header class="title text-uppercase">
+    <h1> Computer Language Hub</h1>
   </header>
 
   <main class="flex-row justify-space-between">
-    <div class="col-12 col-md-8">
+    <div class="container col-12">
+        <section class="hero">
+          <section class="textbottom hero-header text-uppercase">
+            <h2"> The Easiest Way to Find Your Next Development Job</h2>
+          </section>
+        </section>
+ 
+      
 <!-- this is the code for the drop down bar -->
-
-      <div class="card col-9">
+      <section class="card-dd col-9">
         <h3 class="card-header text-uppercase">Select language!</h3>
         <form>
 
             <select id='videos' onchange="selectVideo()">
+
             <option value="nothing">Select video from this list</option>
             <option value="Phython">phython</option>
                <option value="CSS">CSS</option>
                <option value="HTML">HTML</option>
-               <option value="SQL">SQL</option> <link src="http://google.com/">
+               <option value="SQL">SQL</option> 
                <!--<option value="C++">C++</option>-->
                <option value="javascript">JavaScript</option>
             </select>
@@ -37,8 +44,8 @@
 
 <!--end of search by language drop down -->
 <!--start of search bar -->
-<div class="card col-9">
-    <h3>Search by keywords or language!</h3>
+<div class="card-s col-9">
+    <h3 class="card-header text-uppercase">Search by keywords or language!</h3>
     <p>Search by keywords or language!</p>
     
     <form>
@@ -51,15 +58,7 @@
 
 
 <!--end of search bar -->
-      <aside class="card col-3">
-        <h3 class="card-header text-uppercase">Search By Topic</h3>
-        <div id="language-buttons" class="card-body">
-          <button data-language="javascript" class="btn">JavaScript</button>
-          <button data-language="html" class="btn">HTML</button>
-          <button data-language="css" class="btn">CSS</button>
-          <button data-language="css" class="btn">Python</button>
-        </div>
-    </aside>
+      
     </div>
   </main>
 
