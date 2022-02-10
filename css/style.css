@@ -33,10 +33,6 @@ h6 {
   line-height: 1.25;
 }
 
-main {
-  margin-top: 5px;
-}
-
 p {
   font-size: 1.2rem;
 }
@@ -44,8 +40,9 @@ p {
  .btn {
   font-size: 1.3rem;
   text-decoration:none;
-  padding: 10px 5px;
+  padding: 50px 5px;
   width: 100%;
+  max-height:50px;
   display: block;
   margin: 5px 0 20px;
   border-radius: var(--border-radius);
@@ -91,14 +88,11 @@ p {
   box-shadow: 2px 2px var(--dark);
 }
 
-.hero {
-  padding: 3% 4%;
+.title {
+  padding: 1% 2%;
   background-color: var(--dark);
   color: var(--primary);
-}
-
-.hero p {
-  max-width: 75%;
+  text-decoration: underline;
 }
 
 .app-title {
@@ -145,12 +139,51 @@ p {
 }
 
 /* CARDS */
+.hero{
+  border: 3px solid var(--light-dark);
+  border-radius: var(--border-radius);
+  height:300px;
+  margin-left: 20px;
+  margin: 5px;
+  background-image: url("https://www.computersciencedegreehub.com/wp-content/uploads/2021/03/Brief-History-of-Programming-Languages.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-header {
+  color: var(--primary);
+  background-color: var(--tertiary);
+  padding: 1.5%;
+  border-radius: calc(.18rem - 1px) calc(.18rem - 1px) 0 0;
+  font-weight: 700;
+  font-size: 20px;
+  
+}
+
+.textbottom{
+  position:absolute;
+  bottom:0;
+  left:0;
+  margin-bottom: 5px;
+  text-decoration: underline;
+}
+
+.container{
+  height: 100%;
+  border: 3px solid var(--light-dark);
+  border-radius: var(--border-radius);
+}
+
+
 .card {
   border: 3px solid var(--light-dark);
   border-radius: var(--border-radius);
   display:inline-block;
-  width:69%;
-  height:100%
+  width:75%;
+  height:300px;
+  margin-left: 20px;
+  margin: 5px;
 }
 
 .card-header {
@@ -167,11 +200,13 @@ p {
 .aside {
   border: 3px solid var(--light-dark);
   border-radius: var(--border-radius);
+  margin-right:20px;
   clear: both;
   float: right;
   height: 100%;
-  width: 30%;
+  width: 20%;
   flex-wrap:wrap;
+  margin-top:5px;
 }
 
 /* FORM */
