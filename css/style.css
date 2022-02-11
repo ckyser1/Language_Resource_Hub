@@ -240,6 +240,24 @@ p {
   margin-top:5px;
 }
 
+.cardjb {
+  border: 3px solid var(--light-dark);
+  border-radius: var(--border-radius);
+  display:inline-block;
+  width:99%;
+  height:400px;
+  margin: 5px;
+}
+
+.cardyt {
+  border: 3px solid var(--light-dark);
+  border-radius: var(--border-radius);
+  display:inline-block;
+  width:99%;
+  height:400px;
+  margin: 5px;
+}
+
 /* FORM */
 .form-label,
 .form-input,
