@@ -1,5 +1,5 @@
-// var APIkey = "AIzaSyB0hJGNmA5cC6nBDR_ZRCwORbzAtXeZEgw";
-// var youtubeURL = "https://www.googleapis.com/youtube/v3/search" + language + APIkey;
+var APIkey = "AIzaSyB0hJGNmA5cC6nBDR_ZRCwORbzAtXeZEgw"
+//var youtubeURL = "https://www.googleapis.com/youtube/v3/search" + language + APIkey;
 
 
 // function selectVideo(){
@@ -11,18 +11,53 @@
 //     }
 // }
 
-// function authenticate() {
-//     return gapi.auth2.getAuthInstance()
-//         .signIn({scope: "https://www.googleapis.com/auth/youtube.force-ssl"})
-//         .then(function() { console.log("Sign-in successful"); },
-//               function(err) { console.error("Error signing in", err); });
-//   }
-//   function loadClient() {
-//     gapi.client.setApiKey("AIzaSyB0hJGNmA5cC6nBDR_ZRCwORbzAtXeZEgw");
-//     return gapi.client.load("https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest")
-//         .then(function() { console.log("GAPI client loaded for API"); },
-//               function(err) { console.error("Error loading GAPI client for API", err); });
-//   }
+    var urlString = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=";
+    var languages = document.getElementById('languages');
+    var selectedlanguage = videos.options[videos.selectedIndex];
+    if (selectedlanguage.value != "nothing"){
+            window.location = urlString + selectedlanguage.value;
+    }
+
+
+
+var buttonClickHandler = function (event) {
+    var language = event.target.getAttribute('data-language');
+  
+    if (language) {
+      getFeaturedRepos(language);
+  
+      repoContainerEl.textContent = '';
+    }
+  };
+
+  var getyoutubevideo = function (user) {
+    var apiUrl = 'https://www.googleapis.com/youtube/v3/search?part=snippet&q=' + language + APIkey ;
+  
+    fetch(apiUrl)
+      .then(function (response) {
+        if (response.ok) {
+          response.json().then(function (data) {
+            displayRepos(data, user);
+          });
+        } else {
+         
+        }
+      })
+      .catch(function (error) {
+        
+      });
+  };
+
+ // repoEl.setAttribute('href', './results.html?repo=' + );
+
+let buttons = document.querySelectorAll(".dropbtn")
+for (let i = 0; i < buttons.length; i++) {
+    console.log(buttons[i])
+buttons[i].addEventListener( 'click',function(){console.log("here")
+    window.location.assign("results.html")}) }
+    
+
+
 
 
 
