@@ -24,52 +24,49 @@
  
       
 <!-- this is the code for the drop down bar -->
-      <section class="card-dd col-9">
-        <h3 class="card-header text-uppercase">Select language!</h3>
-        <form class="dropdown-content">
-            <select id='videos' onchange="selectVideo()">
-              <option value="nothing">Select video from this list</option>
-              <option value="Python">python</option>
-              <option value="CSS">CSS</option>
-              <option value="HTML">HTML</option>
-              <option value="SQL">SQL</option>
-              <!--<option value="C++">C++</option>-->
-              <option value="javascript">JavaScript</option>
-            </select>
-        </form>
+        <section class="card-dd col-9">
+          <h3 class="card-header text-uppercase">Select language!</h3>
+          <form class="dropdown-content">
+              <select id='videos' onchange="selectVideo()">
+                <option value="nothing">Select video from this list</option>
+                <option value="Python">python</option>
+                <option value="CSS">CSS</option>
+                <option value="HTML">HTML</option>
+                <option value="SQL">SQL</option>
+                <!--<option value="C++">C++</option>-->
+                <option value="javascript">JavaScript</option>
+              </select>
+          </form>
+        </section>
+
+        <aside class="aside col-3">
+          <h3 class="card-header text-uppercase">Search Topic Information! </h3>
+          <div id="language-buttons" class="card-body">
+              <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript'><button data-language="javascript" class="btn">JavaScript</button></a>
+
+              <a href="https://developer.mozilla.org/en-US/docs/Web/HTML"><button data-language="html" class="btn">HTML</button></a>
+
+              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><button data-language="css" class="btn">CSS</button></a>
+
+              <a href="https://developer.mozilla.org/en-US/docs/Glossary/Python"><button data-language="Python" class="btn">Python</button></a>
+          </div>
+      </aside>
+
+  <!--end of search by language drop down -->
+  <!--start of search bar -->
+      <div class="card-s col-9">
+          <h3 class="card-header text-uppercase">Search by keywords or language!</h3>
+          <p>Search by keywords or language!</p>
+          <form>
+              <input id="search-field" type="search" placeholder="Search by keyword, language"><br>
+              <input id="search-button" type="submit">
+          </form>
+      </div>
+
+      <section class="cardjb">
+        <h3 class="card-header text-uppercase">Job Postings</h3>
+        <ul id="jobscontainer"></ul>
       </section>
-
-      <aside class="aside col-3">
-        <h3 class="card-header text-uppercase">Search Topic Information! </h3>
-        <div id="language-buttons" class="card-body">
-
-            <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript'><button data-language="javascript" class="btn">JavaScript</button></a>
-
-        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML"><button data-language="html" class="btn">HTML</button></div>
-
-            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><button data-language="css" class="btn">CSS</button></a>
-
-            <a href="https://developer.mozilla.org/en-US/docs/Glossary/Python"><button data-language="Python" class="btn">Python</button></a>
-        </div>
-    </aside>
-
-
-<!--end of search by language drop down -->
-<!--start of search bar -->
-<div class="card-s col-9">
-    <h3 class="card-header text-uppercase">Search by keywords or language!</h3>
-    <p>Search by keywords or language!</p>
-    
-    <form>
-       
-        <input id="search-field" type="search" placeholder="Search by keyword, language"><br>
-        <input id="search-button" type="submit">
-    </form>
- </div>
-
-
-<!--end of search bar -->
-      
     </div>
   </main>
 
