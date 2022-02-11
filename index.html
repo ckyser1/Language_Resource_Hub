@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./css/style.css" />
+  <link rel="html" href="./results.html"/>
   <title>Hub</title>
 </head>
 
@@ -24,17 +25,22 @@
  
       
 <!-- this is the code for the drop down bar -->
+
+
       <section class="card-dd col-9">
         <h3 class="card-header text-uppercase">Select language!</h3>
         <form class="dropdown-content">
-            <select id='videos' onchange="selectVideo()">
-              <option value="nothing">Select video from this list</option>
-              <option value="Python">python</option>
-              <option value="CSS">CSS</option>
-              <option value="HTML">HTML</option>
-              <option value="SQL">SQL</option>
+            <select id='videos'>
+                
+              <option class="dropbtn" value="nothing">Select video from this list</option>
+              <option class="dropbtn" value="Python">python</option> 
+
+              <option class="dropbtn" value="CSS">CSS</option>
+              <option class="dropbtn" value="HTML">HTML</option>
+              <option class="dropbtn" value="SQL">SQL</option>
               <!--<option value="C++">C++</option>-->
-              <option value="javascript">JavaScript</option>
+              <option class="dropbtn" value="javascript">JavaScript</option>
+
             </select>
         </form>
       </section>
