@@ -1,5 +1,5 @@
-var APIkey = "AIzaSyB0hJGNmA5cC6nBDR_ZRCwORbzAtXeZEgw"
-//var youtubeURL = "https://www.googleapis.com/youtube/v3/search" + language + APIkey;
+// var APIkey = "AIzaSyB0hJGNmA5cC6nBDR_ZRCwORbzAtXeZEgw"
+// var youtubeURL = "https://www.googleapis.com/youtube/v3/search" + language + APIkey;
 
 
 // function selectVideo(){
@@ -11,50 +11,50 @@ var APIkey = "AIzaSyB0hJGNmA5cC6nBDR_ZRCwORbzAtXeZEgw"
 //     }
 // }
 
-    var urlString = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=";
-    var languages = document.getElementById('languages');
-    var selectedlanguage = videos.options[videos.selectedIndex];
-    if (selectedlanguage.value != "nothing"){
-            window.location = urlString + selectedlanguage.value;
-    }
+//     var urlString = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=";
+//     var languages = document.getElementById('languages');
+//     var selectedlanguage = videos.options[videos.selectedIndex];
+//     if (selectedlanguage.value != "nothing"){
+//             window.location = urlString + selectedlanguage.value;
+//     }
 
 
 
-var buttonClickHandler = function (event) {
-    var language = event.target.getAttribute('data-language');
+// var buttonClickHandler = function (event) {
+//     var language = event.target.getAttribute('data-language');
   
-    if (language) {
-      getFeaturedRepos(language);
+//     if (language) {
+//       getFeaturedRepos(language);
   
-      repoContainerEl.textContent = '';
-    }
-  };
+//       repoContainerEl.textContent = '';
+//     }
+//   };
 
-  var getyoutubevideo = function (user) {
-    var apiUrl = 'https://www.googleapis.com/youtube/v3/search?part=snippet&q=' + language + APIkey ;
+//   var getyoutubevideo = function (user) {
+//     var apiUrl = 'https://www.googleapis.com/youtube/v3/search?part=snippet&q=' + language + APIkey ;
   
-    fetch(apiUrl)
-      .then(function (response) {
-        if (response.ok) {
-          response.json().then(function (data) {
-            displayRepos(data, user);
-          });
-        } else {
+//     fetch(apiUrl)
+//       .then(function (response) {
+//         if (response.ok) {
+//           response.json().then(function (data) {
+//             displayRepos(data, user);
+//           });
+//         } else {
          
-        }
-      })
-      .catch(function (error) {
+//         }
+//       })
+//       .catch(function (error) {
         
-      });
-  };
+//       });
+//   };
 
- // repoEl.setAttribute('href', './results.html?repo=' + );
+//  // repoEl.setAttribute('href', './results.html?repo=' + );
 
-let buttons = document.querySelectorAll(".dropbtn")
-for (let i = 0; i < buttons.length; i++) {
-    console.log(buttons[i])
-buttons[i].addEventListener( 'click',function(){console.log("here")
-    window.location.assign("results.html")}) }
+// let buttons = document.querySelectorAll(".dropbtn")
+// for (let i = 0; i < buttons.length; i++) {
+//     console.log(buttons[i])
+// buttons[i].addEventListener( 'click',function(){console.log("here")
+//     window.location.assign("results.html")}) }
     
 
 
@@ -82,9 +82,10 @@ buttons[i].addEventListener( 'click',function(){console.log("here")
      //   ]
      // }
 
+    
+    var getList = function () {
     var lang = "css";
     var remotiveURL = "https://remotive.io/api/remote-jobs?search=%20";
-    var jbContainerEl = document.getElementById('#jobs-container');
 
         fetch(remotiveURL + lang, {
             method: 'GET', //GET is the default.
@@ -94,25 +95,31 @@ buttons[i].addEventListener( 'click',function(){console.log("here")
         .then(function (response) {
             return response.json();
         })
-        .then(data => {
+        .then(function (data) {
             console.log(data);
-            document.getElementById('jobscontainer').innerHTML = data; 
             })
+        }
     
-            
+    
+        async function displayJobs() {
 
-        function displayjobs(data){
-            var jobscontainer = data;
-            const jobsDiv = document.getElementById("jobscontainer");
-
-            const heading = document.createElement("h2")
-            heading.innerHTML=postName;
-
-            jobsDiv.appendChild(postName);
-        };
+            var queryURL = "https://remotive.io/api/remote-jobs?search=%20css";
         
+            var response = await $.ajax({
+                url: queryURL,
+                method: "GET"
+              })
+                console.log(response);
+        
+                var jobPostDiv = $("<div id='jobscontainer'>");
+                var getPost = response.name;
+                
+                var jobPostEl = $("<h3 class=bigweather>").text(getPost+" ("+val+")");
+                
+                jobPostDiv.append(jobPostEl);
     
-
+                $("#jobscontainer").html(jobPostDiv);
+        }
 
 
     
