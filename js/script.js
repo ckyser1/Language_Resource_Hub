@@ -50,11 +50,20 @@
 
 //  // repoEl.setAttribute('href', './results.html?repo=' + );
 
+<<<<<<< HEAD
 // let buttons = document.querySelectorAll(".dropbtn")
 // for (let i = 0; i < buttons.length; i++) {
 //     console.log(buttons[i])
 // buttons[i].addEventListener( 'click',function(){console.log("here")
 //     window.location.assign("results.html")}) }
+=======
+const select = document.querySelector(".videos")
+
+
+   
+select.addEventListener('change',function(event){console.log(event.target.value)
+    window.location.assign("results.html?language="+ event.target.value)}) 
+>>>>>>> d49b5570013a85b2cb3e14a0b78126283e2c26b4
     
 
 
