@@ -44,11 +44,12 @@ var buttonClickHandler = function (event) {
 
  // repoEl.setAttribute('href', './results.html?repo=' + );
 
-let buttons = document.querySelectorAll(".dropbtn")
-for (let i = 0; i < buttons.length; i++) {
-    console.log(buttons[i])
-buttons[i].addEventListener( 'click',function(){console.log("here")
-    window.location.assign("results.html")}) }
+const select = document.querySelector(".videos")
+
+
+   
+select.addEventListener('change',function(event){console.log(event.target.value)
+    window.location.assign("results.html?language="+ event.target.value)}) 
     
 
 
