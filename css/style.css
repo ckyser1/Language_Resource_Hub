@@ -247,6 +247,17 @@ p {
   width:99%;
   height:400px;
   margin: 5px;
+  color: var(--light-dark);
+}
+
+.minicardjb{
+  border: 3px solid var(--light-dark);
+  border-radius: var(--border-radius);
+  display:inline-block;
+  width:20%;
+  height:200px;
+  margin: 5px;
+  color: var(--light-dark);
 }
 
 .cardyt {

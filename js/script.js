@@ -1,5 +1,5 @@
 // var APIkey = "AIzaSyB0hJGNmA5cC6nBDR_ZRCwORbzAtXeZEgw"
-// var youtubeURL = "https://www.googleapis.com/youtube/v3/search" + language + APIkey;
+// //var youtubeURL = "https://www.googleapis.com/youtube/v3/search" + language + APIkey;
 
 
 // function selectVideo(){
@@ -50,20 +50,11 @@
 
 //  // repoEl.setAttribute('href', './results.html?repo=' + );
 
-<<<<<<< HEAD
 // let buttons = document.querySelectorAll(".dropbtn")
 // for (let i = 0; i < buttons.length; i++) {
 //     console.log(buttons[i])
 // buttons[i].addEventListener( 'click',function(){console.log("here")
 //     window.location.assign("results.html")}) }
-=======
-const select = document.querySelector(".videos")
-
-
-   
-select.addEventListener('change',function(event){console.log(event.target.value)
-    window.location.assign("results.html?language="+ event.target.value)}) 
->>>>>>> d49b5570013a85b2cb3e14a0b78126283e2c26b4
     
 
 
@@ -92,43 +83,77 @@ select.addEventListener('change',function(event){console.log(event.target.value)
      // }
 
     
-    var getList = function () {
-    var lang = "css";
-    var remotiveURL = "https://remotive.io/api/remote-jobs?search=%20";
 
-        fetch(remotiveURL + lang, {
-            method: 'GET', //GET is the default.
-            credentials: 'same-origin', // include, *same-origin, omit
-            redirect: 'follow', // manual, *follow, error
-        })
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (data) {
-            console.log(data);
-            })
-        }
-    
-    
-        async function displayJobs() {
+      
 
-            var queryURL = "https://remotive.io/api/remote-jobs?search=%20css";
-        
-            var response = await $.ajax({
-                url: queryURL,
-                method: "GET"
-              })
-                console.log(response);
-        
-                var jobPostDiv = $("<div id='jobscontainer'>");
-                var getPost = response.name;
+            async function displayjobs() {
+                //var lang="java"
+                var queryURL = "https://remotive.io/api/remote-jobs?search=%20" + language;
+            
+                var response = await $.ajax({
+                    url: queryURL,
+                    method: "GET"
+                  })
+                    console.log(response);
+
+                    var jobpostDiv = $("<div class='minicardjb' id='jobscontainer'>");
+                    var getCurrentjobcat = response.jobs[0].category;
+                        
+                    var getCurrentjobname = response.jobs[0].title;
+
+                    var getCurrentcompname = response.jobs[0].company_name;
+
+                    var blink = response.jobs[0].url;
+
+                    var currentjpEl = $("<div>");
+                    currentjpEl.append($("<li>").text(getCurrentjobcat));
+                    currentjpEl.append($("<li>").text(getCurrentjobname));
+                    currentjpEl.append($("<li>").text(getCurrentcompname));
+                    currentjpEl.append($("<li>").text(blink));
+
+                    jobpostDiv.append(currentjpEl);
                 
-                var jobPostEl = $("<h3 class=bigweather>").text(getPost+" ("+val+")");
+                    $("#jobscontainer").html(jobpostDiv);
+
+                    var jobpostDiv = $("<div class='minicardjb' id='jobscontainer2'>");
+                    var getCurrentjobcat = response.jobs[1].category;
+                        
+                    var getCurrentjobname = response.jobs[1].title;
+
+                    var getCurrentcompname = response.jobs[1].company_name;
+
+                    var blink = response.jobs[1].url;
+
+                    var currentjpEl = $("<div>");
+                    currentjpEl.append($("<li>").text(getCurrentjobcat));
+                    currentjpEl.append($("<li>").text(getCurrentjobname));
+                    currentjpEl.append($("<li>").text(getCurrentcompname));
+                    currentjpEl.append($("<li>").text(blink));
+
+                    jobpostDiv.append(currentjpEl);
                 
-                jobPostDiv.append(jobPostEl);
-    
-                $("#jobscontainer").html(jobPostDiv);
-        }
+                    $("#jobscontainer2").html(jobpostDiv);
 
+                    var jobpostDiv = $("<div class='minicardjb' id='jobscontainer3'>");
+                    var getCurrentjobcat = response.jobs[2].category;
+                        
+                    var getCurrentjobname = response.jobs[2].title;
 
-    
+                    var getCurrentcompname = response.jobs[2].company_name;
+
+                    var blink = response.jobs[2].url;
+
+                    var currentjpEl = $("<div>");
+                    currentjpEl.append($("<li>").text(getCurrentjobcat));
+                    currentjpEl.append($("<li>").text(getCurrentjobname));
+                    currentjpEl.append($("<li>").text(getCurrentcompname));
+                    currentjpEl.append($("<li>").text(blink));
+
+                    jobpostDiv.append(currentjpEl);
+                
+                    $("#jobscontainer3").html(jobpostDiv);
+                  
+
+                }
+
+displayjobs();

@@ -28,9 +28,9 @@
         <section class="card-dd col-9">
           <h3 class="card-header text-uppercase">Select language!</h3>
           <form class="dropdown-content">
-              <select id='videos'>
+              <select id='videos' onchange="change()">
                   
-                <option class="dropbtn" value="nothing">Select video from this list</option>
+                <option class="dropbtn" value="nothing">Select language from this list</option>
                 <option class="dropbtn" value="Python">python</option> 
 
                 <option class="dropbtn" value="CSS">CSS</option>
@@ -39,30 +39,18 @@
                 <!--<option value="C++">C++</option>-->
                 <option class="dropbtn" value="javascript">JavaScript</option>
 
-<<<<<<< HEAD
               </select>
           </form>
         </section>
-=======
-      <section class="card-dd col-9">
-        <h3 class="card-header text-uppercase">Select language!</h3>
-        <form class="dropdown-content">
-            <select class='videos'>
-
-              <option class="dropbtn" value="nothing">Select video from this list</option>
-              <option class="dropbtn" value="Python">python</option> 
->>>>>>> d49b5570013a85b2cb3e14a0b78126283e2c26b4
 
         <aside class="aside col-3">
-          <h3 class="card-header text-uppercase">Search Topic Information! </h3>
-          <div id="language-buttons" class="card-body">
-              <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript'><button data-language="javascript" class="btn">JavaScript</button></a>
+          <h3 class="card-header text-uppercase">Useful Websites </h3>
+          <div id="resource-buttons" class="card-body">
+              <button class="btn" onclick="window.open('https://developer.mozilla.org/en-US/' , '_blank'); return false;">Mozilla</button>
+              <button class="btn" onclick="window.open('https://w3schools.com/' , '_blank'); return false;">w3schools</button>
+              <button class="btn" onclick="window.open('https://stackoverflow.com/' , '_blank'); return false;">StackOverflow</button>
+              <button class="btn" onclick="window.open('https://github.com/' , '_blank'); return false;">GitHub</button>
 
-              <a href="https://developer.mozilla.org/en-US/docs/Web/HTML"><button data-language="html" class="btn">HTML</button></a>
-
-              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><button data-language="css" class="btn">CSS</button></a>
-
-              <a href="https://developer.mozilla.org/en-US/docs/Glossary/Python"><button data-language="Python" class="btn">Python</button></a>
           </div>
       </aside>
 
@@ -71,11 +59,16 @@
       <div class="card-s col-9">
           <h3 class="card-header text-uppercase">Search by keywords or language!</h3>
           <p>Search by keywords or language!</p>
-          <form>
+          <!-- <form>
               <input id="search-field" type="search" placeholder="Search by keyword, language"><br>
               <input id="search-button" type="submit">
-          </form>
-      </div>
+          </form> -->
+          <div id="language-buttons">
+            <button class="s-btn" data-language="css" onclick="window.open('./results.html'); return false; language=data-language">css</button>
+            <button class="s-btn" data-language="javascript" onclick="window.open('./results.html'); return false;">javascript</button>
+            <button class="s-btn" data-language="c++" onclick="window.open('./results.html'); return false;">c++</button>
+          </div>
+        </div>
 
       
     </div>
@@ -85,11 +78,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="./js/script.js"></script>
   
-<<<<<<< HEAD
-=======
-
-
->>>>>>> d49b5570013a85b2cb3e14a0b78126283e2c26b4
 </body>
 
 </html>
