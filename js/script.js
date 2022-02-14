@@ -8,7 +8,7 @@
       var language = event.target.getAttribute('data-language');
         console.log(language);
         displayjobs(language);
-        //getyoutubevideo(language);
+        //getvideo(language);
         localStorage.setItem("language", JSON.stringify(language));
        
     };
@@ -80,7 +80,22 @@
             
         }
 
-
+        // async function getvideo(language) {
+        //   //var lang="css";
+        //   APIkey = "AIzaSyCOzqsWKEK3ydI1XWE2QU95s-Enw8XRZq4";
+        //   var apiURL = 'https://www.googleapis.com/youtube/v3/search?part=snippet&q=' + language + "&key=" + APIkey ; 
+        //   console.log(language);
+        //   var response = await $.ajax({
+        //       url: apiURL,
+        //       method: "GET"
+        //     })
+            
+        //       console.log(response);
+        //       if (response ===true){
+        //         var etag=console.etag;
+        //         console.log(etag);
+        //       }
+        //   }
 
 // 2. This code loads the IFrame Player API code asynchronously.
 var tag = document.createElement('script');
@@ -93,13 +108,13 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 //    after the API code downloads.
 var player;
 function onYouTubeIframeAPIReady() {
-  
+
   player = new YT.Player('player', {
     height: '220',
-    width: '300',
-    videoId: play(),
+    width: '400',
+    videoId: '5HaJPpihkBI',
     playerVars: {
-      'playsinline': 1
+      'playsinline': 3
     },
     events: {
       'onReady': onPlayerReady,
@@ -134,5 +149,7 @@ function stopVideo() {
      
   };  
 
-          
-          
+   
+  
+  
+      
