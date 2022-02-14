@@ -3,7 +3,7 @@
      var languageButtonsEl = document.querySelector('#language-buttons');
      var ddEl=document.querySelector('#videos')
   
-
+//button click function to choose the language
      var buttonClickHandler = function (event) {
       var language = event.target.getAttribute('data-language');
         console.log(language);
@@ -14,7 +14,7 @@
     };
 
 
-
+//display job list based on language selected on button click
     async function displayjobs(language) {
         //var lang="css";
         var queryURL = "https://remotive.io/api/remote-jobs?search=%20" + language;
@@ -43,6 +43,7 @@
             
         
             $("#jobscontainer1").html(jobpostDiv);
+            localStorage.setItem("link",JSON.stringify(blink));
 
             var jobpostDiv = $("<div class='minicardjb' id='jobscontainer2'>");
             var getCurrentjobcat2 = response.jobs[1].category;
@@ -59,6 +60,7 @@
             jobpostDiv.append($("<li>").text(blink2));
         
             $("#jobscontainer2").html(jobpostDiv);
+            
 
             var jobpostDiv = $("<div class='minicardjb' id='jobscontainer3'>");
             var getCurrentjobcat = response.jobs[2].category;
@@ -75,7 +77,7 @@
             jobpostDiv.append($("<li>").text(blink));
         
             $("#jobscontainer3").html(jobpostDiv);
-            localStorage.setItem("link",JSON.stringify(blink));
+            
         }
 
 
@@ -91,10 +93,11 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 //    after the API code downloads.
 var player;
 function onYouTubeIframeAPIReady() {
+  
   player = new YT.Player('player', {
     height: '220',
     width: '300',
-    videoId: 'M7lc1UVf-VE',
+    videoId: play(),
     playerVars: {
       'playsinline': 1
     },
