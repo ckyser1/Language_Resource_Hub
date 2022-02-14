@@ -3,18 +3,18 @@
      var languageButtonsEl = document.querySelector('#language-buttons');
      var ddEl=document.querySelector('#videos')
   
-
+//button click function to choose the language
      var buttonClickHandler = function (event) {
       var language = event.target.getAttribute('data-language');
         console.log(language);
         displayjobs(language);
-        //getyoutubevideo(language);
+        //getvideo(language);
         localStorage.setItem("language", JSON.stringify(language));
        
     };
 
 
-
+//display job list based on language selected on button click
     async function displayjobs(language) {
         //var lang="css";
         var queryURL = "https://remotive.io/api/remote-jobs?search=%20" + language;
@@ -43,6 +43,7 @@
             
         
             $("#jobscontainer1").html(jobpostDiv);
+            localStorage.setItem("link",JSON.stringify(blink));
 
             var jobpostDiv = $("<div class='minicardjb' id='jobscontainer2'>");
             var getCurrentjobcat2 = response.jobs[1].category;
@@ -59,6 +60,7 @@
             jobpostDiv.append($("<li>").text(blink2));
         
             $("#jobscontainer2").html(jobpostDiv);
+            
 
             var jobpostDiv = $("<div class='minicardjb' id='jobscontainer3'>");
             var getCurrentjobcat = response.jobs[2].category;
@@ -75,10 +77,25 @@
             jobpostDiv.append($("<li>").text(blink));
         
             $("#jobscontainer3").html(jobpostDiv);
-            localStorage.setItem("link",JSON.stringify(blink));
+            
         }
 
-
+        // async function getvideo(language) {
+        //   //var lang="css";
+        //   APIkey = "AIzaSyCOzqsWKEK3ydI1XWE2QU95s-Enw8XRZq4";
+        //   var apiURL = 'https://www.googleapis.com/youtube/v3/search?part=snippet&q=' + language + "&key=" + APIkey ; 
+        //   console.log(language);
+        //   var response = await $.ajax({
+        //       url: apiURL,
+        //       method: "GET"
+        //     })
+            
+        //       console.log(response);
+        //       if (response ===true){
+        //         var etag=console.etag;
+        //         console.log(etag);
+        //       }
+        //   }
 
 // 2. This code loads the IFrame Player API code asynchronously.
 var tag = document.createElement('script');
@@ -91,12 +108,13 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 //    after the API code downloads.
 var player;
 function onYouTubeIframeAPIReady() {
+
   player = new YT.Player('player', {
     height: '220',
-    width: '300',
-    videoId: 'M7lc1UVf-VE',
+    width: '400',
+    videoId: '5HaJPpihkBI',
     playerVars: {
-      'playsinline': 1
+      'playsinline': 3
     },
     events: {
       'onReady': onPlayerReady,
@@ -131,5 +149,7 @@ function stopVideo() {
      
   };  
 
-          
-          
+   
+  
+  
+      
