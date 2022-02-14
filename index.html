@@ -25,65 +25,55 @@
  
       
 <!-- this is the code for the drop down bar -->
+        <section class="card-dd col-9">
+          <h3 class="card-header text-uppercase">Select language!</h3>
+          <div id="language-buttons">
+            <button class="s-btn" data-language="css">css</button>
+            <button class="s-btn" data-language="javascript">javascript</button>
+            <button class="s-btn" data-language="python">python</button>
+            <button class="s-btn" data-language="c++">c++</button>
+            <button class="s-btn" data-language="c#">c#</button>
+            <button class="s-btn" data-language="swift">swift</button>
+            <button class="s-btn" data-language="java">java</button>
+            <button class="s-btn" data-language="php">php</button>
+          </div>
+        </section>
 
+        <aside class="aside col-3">
+          <h3 class="card-header text-uppercase">Useful Websites </h3>
+          <div id="resource-buttons" class="card-body">
+              <button class="btn" onclick="window.open('https://developer.mozilla.org/en-US/' , '_blank'); return false;">Mozilla</button>
+              <button class="btn" onclick="window.open('https://w3schools.com/' , '_blank'); return false;">w3schools</button>
+              <button class="btn" onclick="window.open('https://stackoverflow.com/' , '_blank'); return false;">StackOverflow</button>
+              <button class="btn" onclick="window.open('https://github.com/' , '_blank'); return false;">GitHub</button>
 
-      <section class="card-dd col-9">
-        <h3 class="card-header text-uppercase">Select language!</h3>
-        <form class="dropdown-content">
-            <select class='videos'>
+          </div>
+      </aside>
 
-              <option class="dropbtn" value="nothing">Select video from this list</option>
-              <option class="dropbtn" value="Python">python</option> 
+  <!--end of search by language drop down -->
+  <!--start of search bar -->
+      <div class="card-s col-9">
+          <h3 class="card-header text-uppercase">Video Resources</h3>
+          <div id="player"></div>
 
-              <option class="dropbtn" value="CSS">CSS</option>
-              <option class="dropbtn" value="HTML">HTML</option>
-              <option class="dropbtn" value="SQL">SQL</option>
-              <!--<option value="C++">C++</option>-->
-              <option class="dropbtn" value="javascript">JavaScript</option>
-
-            </select>
-        </form>
-      </section>
-
-      <aside class="aside col-3">
-        <h3 class="card-header text-uppercase">Search Topic Information! </h3>
-        <div id="language-buttons" class="card-body">
-
-            <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript'><button data-language="javascript" class="btn">JavaScript</button></a>
-
-        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML"><button data-language="html" class="btn">HTML</button></div>
-
-            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><button data-language="css" class="btn">CSS</button></a>
-
-            <a href="https://developer.mozilla.org/en-US/docs/Glossary/Python"><button data-language="Python" class="btn">Python</button></a>
         </div>
-    </aside>
+        
+      <!-- this is the code for the drop down bar -->
+            <section class="cardjb">
+              <h3 class="card-header text-uppercase">Job Postings</h3>
+                <div id="jobscontainer1"></div>
+                <div id="jobscontainer2"></div>
+                <div id="jobscontainer3"></div>
+            </section>
 
-
-<!--end of search by language drop down -->
-<!--start of search bar -->
-<div class="card-s col-9">
-    <h3 class="card-header text-uppercase">Search by keywords or language!</h3>
-    <p>Search by keywords or language!</p>
-    
-    <form>
-       
-        <input id="search-field" type="search" placeholder="Search by keyword, language"><br>
-        <input id="search-button" type="submit">
-
-    </form>
- </div>
-
-
-<!--end of search bar -->
       
     </div>
   </main>
 
+  <script src="https://apis.google.com/js/api.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="./js/script.js"></script>
   
-
-
 </body>
 
 </html>
