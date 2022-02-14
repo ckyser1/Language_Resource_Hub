@@ -27,20 +27,16 @@
 <!-- this is the code for the drop down bar -->
         <section class="card-dd col-9">
           <h3 class="card-header text-uppercase">Select language!</h3>
-          <form class="dropdown-content">
-              <select id='videos' onchange="change()">
-                  
-                <option class="dropbtn" value="nothing">Select language from this list</option>
-                <option class="dropbtn" value="Python">python</option> 
-
-                <option class="dropbtn" value="CSS">CSS</option>
-                <option class="dropbtn" value="HTML">HTML</option>
-                <option class="dropbtn" value="SQL">SQL</option>
-                <!--<option value="C++">C++</option>-->
-                <option class="dropbtn" value="javascript">JavaScript</option>
-
-              </select>
-          </form>
+          <div id="language-buttons">
+            <button class="s-btn" data-language="css">css</button>
+            <button class="s-btn" data-language="javascript">javascript</button>
+            <button class="s-btn" data-language="python">python</button>
+            <button class="s-btn" data-language="c++">c++</button>
+            <button class="s-btn" data-language="c#">c#</button>
+            <button class="s-btn" data-language="swift">swift</button>
+            <button class="s-btn" data-language="java">java</button>
+            <button class="s-btn" data-language="php">php</button>
+          </div>
         </section>
 
         <aside class="aside col-3">
@@ -57,18 +53,18 @@
   <!--end of search by language drop down -->
   <!--start of search bar -->
       <div class="card-s col-9">
-          <h3 class="card-header text-uppercase">Search by keywords or language!</h3>
-          <p>Search by keywords or language!</p>
-          <!-- <form>
-              <input id="search-field" type="search" placeholder="Search by keyword, language"><br>
-              <input id="search-button" type="submit">
-          </form> -->
-          <div id="language-buttons">
-            <button class="s-btn" data-language="css" onclick="window.open('./results.html'); return false; language=data-language">css</button>
-            <button class="s-btn" data-language="javascript" onclick="window.open('./results.html'); return false;">javascript</button>
-            <button class="s-btn" data-language="c++" onclick="window.open('./results.html'); return false;">c++</button>
-          </div>
+          <h3 class="card-header text-uppercase">Video Resources</h3>
+          <div id="player"></div>
+
         </div>
+        
+      <!-- this is the code for the drop down bar -->
+            <section class="cardjb">
+              <h3 class="card-header text-uppercase">Job Postings</h3>
+                <div id="jobscontainer1"></div>
+                <div id="jobscontainer2"></div>
+                <div id="jobscontainer3"></div>
+            </section>
 
       
     </div>
